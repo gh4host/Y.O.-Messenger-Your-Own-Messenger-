@@ -1,6 +1,6 @@
-# Y.O. Messenger
+# YOM
 
-Y.O. means Your Own Messenger. This repository contains a compact Android messenger and a self-hosted Java server. It has one English interface, one black-and-white theme, private notification summaries, direct conversations, text messages, local message storage, delivery status, automatic token refresh, and WebSocket reconnect.
+YOM means Your Own Messenger. This repository contains a compact Android messenger and a self-hosted Java server. It has one English interface, one black-and-white theme, private notification summaries, direct conversations, text messages, local message storage, delivery status, automatic token refresh, and WebSocket reconnect.
 
 The app connects only to the server selected by the user. A server address is verified through `GET /api/server/info` before it is saved. Changing the server closes the WebSocket, removes both tokens, clears local account data, and returns to sign in.
 
@@ -15,7 +15,7 @@ The app connects only to the server selected by the user. A server address is ve
 
 Passwords are hashed with BCrypt. Access tokens are short-lived and refresh tokens expire independently. Message bodies are encrypted at rest while waiting for delivery and are deleted from the server queue after recipient acknowledgement. Delivery metadata is retained temporarily for retry safety.
 
-Y.O. Messenger does not claim end-to-end encryption. The server processes message plaintext before encrypting the delivery queue. Use TLS, protect the host, keep PostgreSQL private, rotate secrets, and maintain backups.
+YOM does not claim end-to-end encryption. The server processes message plaintext before encrypting the delivery queue. Use TLS, protect the host, keep PostgreSQL private, rotate secrets, and maintain backups.
 
 Never commit `.env`, database files, private keys, tunnel tokens, tunnel credential JSON files, real user data, or signed release keystores.
 
@@ -253,7 +253,7 @@ For a distributable release, use **Build → Generate Signed App Bundle or APK**
 ## Connect the app to your server
 
 1. Install the APK.
-2. Open Y.O. Messenger.
+2. Open YOM.
 3. Tap **Your server** at the top.
 4. Enter the base address only, for example `https://chat.example.com`.
 5. Tap **Check and save**.
