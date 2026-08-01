@@ -68,7 +68,7 @@ Expected structure:
 
 ```json
 {
-  "name": "My Y.O. Messenger Server",
+  "name": "My YOM Server",
   "version": "1.0.0",
   "apiVersion": 1
 }
@@ -134,7 +134,7 @@ export SPRING_DATASOURCE_USERNAME='yo_messenger'
 export SPRING_DATASOURCE_PASSWORD='replace-with-your-password'
 export APP_JWT_SECRET='replace-with-your-generated-secret'
 export APP_CRYPTO_KEY='replace-with-your-generated-base64-key'
-export APP_SERVER_NAME='My Y.O. Messenger Server'
+export APP_SERVER_NAME='My YOM Messenger Server'
 java -jar build/libs/yo-messenger-server-1.0.0.jar
 ```
 
@@ -158,7 +158,7 @@ SPRING_DATASOURCE_PASSWORD=replace-with-your-password
 APP_JWT_SECRET=replace-with-your-generated-secret
 APP_CRYPTO_KEY=replace-with-your-generated-base64-key
 APP_CORS_ORIGINS=*
-APP_SERVER_NAME="My Y.O. Messenger Server"
+APP_SERVER_NAME="My YOM Server"
 APP_ACCESS_TOKEN_MINUTES=15
 APP_REFRESH_TOKEN_DAYS=30
 SERVER_PORT=8080
@@ -175,7 +175,7 @@ Create `/etc/systemd/system/yo-messenger.service`:
 
 ```ini
 [Unit]
-Description=Y.O. Messenger Server
+Description=YOM Server
 After=network-online.target postgresql.service
 Wants=network-online.target
 
